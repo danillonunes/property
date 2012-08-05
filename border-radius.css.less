@@ -1,0 +1,111 @@
+/**
+ * Border radius properties.
+ */
+
+/**
+ * Main border-radius property.
+ *
+ * Set one value to be used by all corners.
+ */
+.border-radius(@radius) {
+  .border-radius(@radius, @radius, @radius, @radius);
+}
+
+/**
+ * Extended main border-radius property.
+ *
+ * Set one value for each corner.
+ */
+.border-radius(@top-left, @top-right, @bottom-right, @bottom-left) {
+  .border-top-left-radius(@top-left);
+  .border-top-right-radius(@top-right);
+  .border-bottom-left-radius(@bottom-left);
+  .border-bottom-right-radius(@bottom-right);
+}
+
+/**
+ * Shorthand properties to define border-radius to corners of one side.
+ *
+ * They are here to convenience, but they doesn't have any CSS equivalence.
+ */
+
+/**
+ * Shorthand border-radius properties to top corners.
+ */
+.border-top-radius(@radius) {
+  .border-top-left-radius(@radius);
+  .border-top-right-radius(@radius);
+}
+
+/**
+ * Shorthand border-radius properties to left corners.
+ */
+.border-left-radius(@radius) {
+  .border-top-left-radius(@radius);
+  .border-bottom-left-radius(@radius);
+}
+
+/**
+ * Shorthand border-radius properties to bottom corners.
+ */
+.border-bottom-radius(@radius) {
+  .border-bottom-left-radius(@radius);
+  .border-bottom-right-radius(@radius);
+}
+
+/**
+ * Shorthand border-radius properties to right corners.
+ */
+.border-right-radius(@radius) {
+  .border-top-right-radius(@radius);
+  .border-bottom-right-radius(@radius);
+}
+
+/**
+ * The "real" border-radius properties, as defined by W3C.
+ *
+ * They are used internally by shorthands definitions,
+ * but you are free to use them also if you want.
+ *
+ * @see http://www.w3.org/TR/css3-background/#the-border-radius
+ */
+
+ /**
+  * Border-radius property to top left corner.
+  */
+.border-top-left-radius(@radius) {
+      -moz-border-radius-topleft: @radius;
+      -ms-border-top-left-radius: @radius;
+  -webkit-border-top-left-radius: @radius;
+          border-top-left-radius: @radius;
+}
+
+/**
+ * Border-radius property to top right corner.
+ */
+.border-top-right-radius(@radius) {
+      -moz-border-radius-topright: @radius;
+      -ms-border-top-right-radius: @radius;
+  -webkit-border-top-right-radius: @radius;
+          border-top-right-radius: @radius;
+}
+
+/**
+ * Border-radius property to bottom right corner.
+ */
+.border-bottom-right-radius(@radius) {
+      -moz-border-radius-bottomright: @radius;
+      -ms-border-bottom-right-radius: @radius;
+  -webkit-border-bottom-right-radius: @radius;
+          border-bottom-right-radius: @radius;
+}
+
+/**
+ * Border-radius property to bottom left corner.
+ */
+.border-bottom-left-radius(@radius) {
+      -moz-border-radius-bottomleft: @radius;
+      -ms-border-bottom-left-radius: @radius;
+  -webkit-border-bottom-left-radius: @radius;
+          border-bottom-left-radius: @radius;
+}
