@@ -1,0 +1,57 @@
+/**
+ * Transition properties.
+ *
+ * @see http://www.w3.org/TR/css3-transitions
+ */
+
+/**
+ * Shorthand transition property, as defined by W3C.
+ *
+ * Set all transition properties at once.
+ */
+.transition(@property: all, @duration: 0s, @timing-function: ease, @delay: 0s) {
+  .transition-property(@property);
+  .transition-duration(@duration);
+  .transition-timing-function(@timing-function);
+  .transition-delay(@delay);
+}
+
+/**
+ * Transition-property property.
+ */
+.transition-property(@property: all) {
+     -moz-transition-property: @property;
+       -o-transition-property: @property;
+  -webkit-transition-property: @property;
+          transition-property: @property;
+}
+
+/**
+ * Transition-duration property.
+ */
+.transition-duration(@duration: 0s) {
+     -moz-transition-duration: @duration;
+       -o-transition-duration: @duration;
+  -webkit-transition-duration: @duration;
+          transition-duration: @duration;
+}
+
+/**
+ * Transition-timing-function property.
+ */
+.transition-timing-function(@timing-function: ease) {
+     -moz-transition-timing-function: @timing-function;
+       -o-transition-timing-function: @timing-function;
+  -webkit-transition-timing-function: @timing-function;
+          transition-timing-function: @timing-function;
+}
+
+/**
+ * Transition-delay property.
+ */
+.transition-delay(@delay: 0s) {
+     -moz-transition-delay: @delay;
+       -o-transition-delay: @delay;
+  -webkit-transition-delay: @delay;
+          transition-delay: @delay;
+}
